@@ -75,6 +75,10 @@
                             <input type="text" name="nama_belakang" class="form-control" id="nama_belakang" placeholder="Masukkan nama depan . . .">
                         </div>
                         <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Masukkan email . . .">
+                        </div>
+                        <div class="form-group">
                             <label for="jenis_kelamin">Pilih Jenis Kelamin</label>
                             <select class="form-control" name="jenis_kelamin" class="custom-select" id="jenis_kelamin">
                                 <option value="L">Laki-laki</option>
