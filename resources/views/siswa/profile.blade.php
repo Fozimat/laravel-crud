@@ -38,7 +38,7 @@
                                         {{ $siswa->mapel->count() }} <span>Mapel</span>
                                     </div>
                                     <div class="col-md-4 stat-item">
-                                        15 <span>Awards</span>
+                                        {{ $siswa->rataRataNilai() }} <span>Rata-rata nilai</span>
                                     </div>
                                     <div class="col-md-4 stat-item">
                                         2174 <span>Points</span>
