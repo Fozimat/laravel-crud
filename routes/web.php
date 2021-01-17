@@ -13,17 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
-// Route::get('/', 'DashboardController@index');
+Route::get('/', 'SiteController@home');
+Route::get('/register', 'SiteController@register');
+Route::post('/postregister', 'SiteController@postregister');
+Route::get('/about', 'SiteController@about');
+
 
 Route::get('/login', 'AuthController@login')->name('login');
 Route::post('/postlogin', 'AuthController@postlogin');
 Route::get('/logout', 'AuthController@logout');
 
 Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
-    Route::get('/', 'DashboardController@index');
+    // Route::get('/', 'DashboardController@index');
     Route::get('/siswa', 'SiswaController@index');
     Route::post('/siswa/create', 'SiswaController@create');
     Route::get('/siswa/{siswa}/edit', 'SiswaController@edit');
